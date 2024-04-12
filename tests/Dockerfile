@@ -7,4 +7,4 @@ RUN npm install -g newman-reporter-json-summary
 
 COPY ["tests/", "./"]
 
-ENTRYPOINT newman run sample.postman_collection.json  --environment=sample-local.postman_environment.json --reporters cli,json --reporter-json-export /data/results/outputfile.json
+ENTRYPOINT newman run Integration-tests.postman_collection.json  --environment=integration-environment.postman_environment.json --reporters cli,json --reporter-json-export /data/results/outputfile.json
